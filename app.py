@@ -21,6 +21,10 @@ def ocr():
             "error": "OCR failed",
             "status_code": status_code
         }), 500
+        
+@app.route('/test', methods=['GET'])
+def test():
+    return jsonify({"message": "hello world"})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=True)
